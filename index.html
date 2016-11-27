@@ -6,8 +6,40 @@
     
     <!-- css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style>
+      #sudoku {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+
+      #sudoku div {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid green;
+        line-height: 50px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      #sudoku div:hover,
+      #sudoku div.active {
+        cursor: pointer;
+        color: white;
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
+    <div class="container">
+      <h1>SUDOKU Solver</h1>
+
+      <div id="sudoku"></div>
+      
+      <div id="reset-btn" class="btn btn-danger">reset</div>
+      <div id="start-btn" class="btn btn-primary">solve</div>
+    </div>
+    
     
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
